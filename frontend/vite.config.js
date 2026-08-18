@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/federated-threat-detection/',
+  base: process.env.RENDER ? '/' : '/federated-threat-detection/',
   server: {
     port: 5173,
     proxy: {
